@@ -1,0 +1,64 @@
+/* =============
+    Section 5
+============= */
+#section-5 {
+
+    @include xl {
+        display: grid;
+        grid-template-areas: ". section-5 .";
+        grid-template-columns: auto 1200px auto;
+    }
+        
+
+    ul{
+        display: grid;
+        gap: 15px;
+        grid-template-rows: repeat(3, 400px);
+
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 400px);
+            grid-template-areas: 
+                "g1 g1"
+                "g1 g1"
+                "g2 g3";
+        }
+
+        @include lg {
+            grid-template-areas: 
+                "g1 g2"
+                "g1 g3";
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include xl {
+            grid-area: section-5;
+        }
+
+        li {
+            background-position: center;
+            background-size: cover;
+        }
+
+        #g1{
+            background-image: url("../img/section-5/gallery-1.png");
+            @include md {
+                grid-area: g1;
+            }
+        }
+
+        #g2{
+            background-image: url("../img/section-5/gallery-2.jpg");
+            @include md {
+                grid-area: g2;
+            }
+        }
+
+        #g3{
+            background-image: url("../img/section-5/gallery-3.jpg");
+            @include md {
+                grid-area: g3;
+            }
+        }
+    }
+}

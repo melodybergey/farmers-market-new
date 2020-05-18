@@ -1,0 +1,24 @@
+/* =============
+    Section 4
+============= */
+#section-4{
+   
+    display: grid;
+    grid-template-columns: 10px auto 10px ;
+    grid-template-areas: ". section-4 .";
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 800px auto;
+    }
+
+    section{
+        grid-area: section-4;
+
+        h2{
+            margin: 10px 40px;
+            font-size: rem-calc(25);
+            line-height: rem-calc(25);
+            text-align: center;
+        }
+    }
+}

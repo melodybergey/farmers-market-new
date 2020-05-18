@@ -1,0 +1,28 @@
+/* =============
+    Section 6
+============= */
+#section-6{
+    aside{
+        img{
+            width: 100%;
+        }
+    }
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas:". section-6 ." ;
+    margin: 20px 0 20px;
+
+    #section-6-content{
+        grid-area: section-6;
+    }
+
+    // #section-6-text{
+    //     display: grid;
+    //     grid-template-columns: 10px auto 10px;
+    //     grid-area: ". section-6-text. ";
+    // }
+
+    // h4{
+    //     font-size: rem-calc(16);
+    //     line-height: rem-calc(25);
+    }

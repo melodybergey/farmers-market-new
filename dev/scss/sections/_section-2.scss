@@ -1,0 +1,106 @@
+/* =============
+    Section 2
+============= */
+
+#section-2{
+
+    margin: 20px;
+    
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-2 .";
+    }
+
+    #section-2-content{
+
+        @include md{
+            display: grid;
+            grid-template-columns: 45% auto;
+            grid-template-areas: "section-2-img section-2-content";
+        }
+
+
+        @include xl{
+            grid-area: section-2;
+        }
+
+        #section-2-text{
+            display: grid;
+            grid-template-columns: 10px auto 10px;
+            grid-area: ". section-2-text .";
+            margin: 20px 0 20px;
+
+            h2{
+                font-size: rem-calc(25);
+                line-height: rem-calc(25);
+            }
+
+            h4{
+                font-size: rem-calc(16);
+                line-height: rem-calc(25);
+            }
+
+            @include md{
+                grid-area: section-2-content;
+            }
+
+            #section-2-text-content{
+                grid-area: section-2-text;
+            }
+        }
+
+        aside{
+            background-image: url("../img/section-2/market.png");
+            background-size: cover;
+            background-position: top;
+            background-origin: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+
+        }
+    }
+}
+
+
+
+// #section-2{
+
+//     @include md{
+//         display: grid;
+//         grid-template-columns: auto 768px auto;
+//         grid-template-areas: ". section-2-tablet";
+//     }
+
+//     #section-2-tablet{
+//         @include md{
+//             display: grid;
+//             grid-template-columns: 40% auto;
+//             grid-template-areas: "section-2-tablet";
+//         }
+
+//         @include md{
+//             grid-template-areas: section-2-tablet;
+//         }
+    
+//         aside{
+//             img{
+//                 width: 100%;
+//             }
+//         }
+//         display: grid;
+//         grid-template-columns: 2% auto 2%;
+//         grid-template-areas:". section-2 ." ;
+    
+//         }
+    
+//         #section-2-content{
+//             @include md{
+//                 display: grid;
+//                 grid-template-columns: 15% auto 15% ;
+//                 grid-template-areas: section-2-content;
+//             }
+         
+//         }
+//     }

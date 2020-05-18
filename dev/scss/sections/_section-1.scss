@@ -1,0 +1,25 @@
+/* =============
+    Section 1
+============= */
+#section-1{
+    background-image: url("../img/section-1/veggies.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: center;
+    // border: 1px solid red;
+    height: 40vh;
+
+    @include md{
+        height: 10vh;
+    }
+
+    @include lg{
+        height: 100vh;
+    }
+
+    @include xl{
+        height: 100vh;
+    }
+
+}
